@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cartel</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Geom:ital,wght@0,300..900;1,300..900&family=Outfit:wght@100..900&display=swap');
+
+    body {
+      margin: 0;
+      background: white;
+      display: flex;
+      justify-content: left;
+      align-items: left;
+      height: 100vh;
+    }
+
+    .cartel {
+      width: 40vw;
+      height: 100vh;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(16, 1fr);
+    }
+
+    .amarillo {
+      background: rgb(255, 244, 80);
+      grid-column: 1 / 4;
+      grid-row: 1 / 3;
+    }
+
+    .verdeapagado {
+      background: rgb(106, 181, 112);
+      grid-column: 1 / 3;
+      grid-row: 3 / 5;
+    }
+
+    .azulmuyclaro {
+      grid-column: 3 / 4;
+      grid-row: 3 / 7;
+      position: relative;
+    }
+
+    .violeta1 {
+      background: rgb(179, 40, 193);
+      grid-column: 1 / 3;
+      grid-row: 5 / 7;
+    }
+
+    .violeta2 {
+      background: rgb(179, 40, 193);
+      grid-column: 2 / 4;
+      grid-row: 7 / 11;
+    }
+
+    .másverdeclaro {
+      background: rgb(55, 185, 85);
+      grid-column: 1 / 2;
+      grid-row: 7 / 11;
+      position: relative;
+    }
+
+    .verdeclaro1 {
+      background: rgb(55, 185, 85);
+      grid-column: 1 / 3;
+      grid-row: 11 / 13;
+    }
+
+    .verdeclaro2 {
+      background: rgb(55, 185, 85);
+      grid-column: 1 / 3;
+      grid-row: 13 / 17;
+    }
+
+    .azuloscuro {
+      background: rgb(8, 57, 194);
+      grid-column: 3 / 4;
+      grid-row: 11 / 17;
+      position: relative;
+    }
+
+    .másazuloscuro {
+      background: rgb(8, 57, 194);
+      grid-column: 2 / 3;
+      grid-row: 13 / 17;
+      position: relative;
+    }
+
+    .bloque-texto {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      padding: 20px;
+      overflow: hidden;
+    }
+
+    .texto {
+      font-family: 'Outfit', sans-serif;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 1.2;
+      text-align: left;
+      color: black;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: clip;
+    }
+
+    .triángulo {
+      position: relative;
+    }
+
+    .triángulo svg {
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+
+    .texto-triangulo {
+      position: absolute;
+      font-family: 'Outfit', sans-serif;
+      font-weight: 700;
+      color: black;
+      overflow: hidden;
+    }
+
+    .texto-rosa {
+      top: 8px;
+      left: 8px;
+    }
+
+    .texto-azul {
+      bottom: 8px;
+      right: 8px;
+    }
+
+    .texto-direccion {
+      font-size: 11px;
+      transform: rotate(-90deg);
+      transform-origin: top left;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: clip;
+    }
+
+    .texto-azulmuyclaro {
+      padding: 6px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="cartel">
+    <div class="amarillo bloque-texto">
+      <div class="texto">KILO KISH (US, LIVE)</div>
+    </div>
+
+    <div class="verdeapagado bloque-texto">
+      <div class="texto">MUJUICE (DJ-SET)</div>
+    </div>
+
+    <div class="azulmuyclaro triángulo">
+      <svg viewBox="0 0 100 100" preserveAspectRatio="none">
+        <rect width="100" height="100" fill="#A6CAFC" />
+        <polygon points="100 0 0 0 100 100" fill="rgb(255, 244, 80)" />
+      </svg>
+      <div class="texto-triangulo texto-azulmuyclaro texto-direccion">
+        14, BLDG. 5A,<br />
+        BERSEMESKAYA EMB.
+      </div>
+    </div>
+
+    <div class="violeta1 bloque-texto">
+      <div class="texto">
+        KIRILL IVANOVA<br />
+        (SBPCH, DJ-SET)
+      </div>
+    </div>
+
+    <div class="másverdeclaro triángulo">
+      <svg viewBox="0 0 100 100" preserveAspectRatio="none">
+        <polygon points="0 0 100 100 100 0" fill="#01AEF0" />
+      </svg>
+    </div>
+
+    <div class="violeta2"></div>
+
+    <div class="verdeclaro1"></div>
+
+    <div class="verdeclaro2 bloque-texto">
+      <div class="texto">STRELKA</div>
+    </div>
+
+    <div class="másazuloscuro triángulo">
+      <svg viewBox="0 0 100 100" preserveAspectRatio="none">
+        <polygon points="0 100 100 0 0 0" fill="#F786BC" />
+      </svg>
+      <div class="texto-triangulo texto-rosa">10.06</div>
+      <div class="texto-triangulo texto-azul">23:00</div>
+    </div>
+
+    <div class="azuloscuro"></div>
+  </div>
+</body>
+</html>
